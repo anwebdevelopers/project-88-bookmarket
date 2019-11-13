@@ -77,28 +77,18 @@
 		<div class="header__bottom">
 			<div class="container">
 				<div class="header__bottom-box">
-					<div class="header__main">
-						<figure class="header__logo">
-							<img src="img/logo.svg" alt="">
-						</figure>
-						<div class="header__text">Более 50 000 <br>книг в центре <br>Ярославля</div>
-						<form class="header__search">
-							<input type="text" placeholder="Название, автор, издательство, ISBN">
-							<button type="submit" class="button">Искать</button>
-						</form>
-						<div class="header__menu">
-							<ul class="header__menu-list">
-								<li><a href="#">Все книги</a></li>
-								<li><a href="#">Художественная литература</a></li>
-								<li><a href="#">Книги для детей</a></li>
-								<li><a href="#">Образование</a></li>
-								<li><a href="#">Деловая литература</a></li>
-							</ul>
-						</div>
-					</div>
+
+					<figure class="header__logo">
+						<img src="img/logo.svg" alt="">
+					</figure>
+					<div class="header__text">Более 50 000 <br>книг в центре <br>Ярославля</div>
+					<form class="header__search">
+						<input type="text" placeholder="Название, автор, издательство, ISBN">
+						<button type="submit" class="button">Искать</button>
+					</form>
 					<div class="header__account">
 						<a href="#" class="header__basket">
-							<div class="header__basket-icon">
+							<div class="header__basket-icon" data-count-goods="10">
 								<svg><use href="#icon-basket"></use></svg>
 							</div>
 							<div class="header__basket-text">Корзина</div>
@@ -109,19 +99,111 @@
 							</div>
 							<div class="header__login-text">Авторизация</div>
 						</a>
-						<a href="#" class="header__bonus">
-							<div class="header__bonus-icon">
-								<svg><use href="#icon-bonus"></use></svg>
-							</div>
-							<div class="header__bonus-text">Бонусная программа</div>
-						</a>
+					</div>
+					<button class="header__button-menu"></button>
+					<div class="header__menu">
+						<ul class="header__menu-list">
+							<li><a href="#">Все книги</a></li>
+							<li><a href="#">Художественная литература</a></li>
+							<li><a href="#">Книги для детей</a></li>
+							<li><a href="#">Образование</a></li>
+							<li><a href="#">Деловая литература</a></li>
+							<li><a href="#"><svg><use href="#icon-bonus"></use></svg> Бонусная программа</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 
+	<section class="banners">
+		<div class="container">
+			<div class="banners__box">
+				<div class="banners__item" style="background-image: url(img/img-banners-1.jpg);">
+					<div class="banners__title">Читай на <br>переменах!</div>
+					<div class="banners__text">Скидки до 30% на художественную <br>литературу с 1 по 10 сентября</div>
+					<div class="banners__button">
+						<button class="button button__color_accent" type="button">Выбрать книги</button>
+					</div>
+				</div>
+				<div class="banners__item" style="background-image: url(img/img-banners-1.jpg);">
+					<div class="banners__title">Читай на <br>переменах!</div>
+					<div class="banners__text">Скидки до 30% на художественную <br>литературу с 1 по 10 сентября</div>
+					<div class="banners__button">
+						<button class="button button__color_accent" type="button">Выбрать книги</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<section class="intro">
+		<div class="container">
+			<div class="intro__box">
+				<figure class="intro__image"><img src="img/img-intro.svg" alt=""></figure>
+				<div class="intro__content text">
+					<h2>Книжный интернет-магазин «Книжный маркет»</h2>
+					<p>Уже более 10 лет в самом центре Ярославля для любителей чтения работает наш магазин. У нас на полках более 90 000 книг всевозможных категорий:  художественная литература, образование, детские книги, бизнес-издания и многое другое. Каталог товаров постоянно пополяется, в том числе редкими изданиями и новинками литературы. Для постоянных покупателей действует накопительная бонусная система. </p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="container">
+				<div class="footer__top-box">
+					<figure class="footer__logo">
+						<img src="img/logo-footer.svg" alt="">
+					</figure>
+					<div class="footer__nav">
+						<div class="footer__nav-item">
+							<div class="footer__nav-title">О компании</div>
+							<ul class="footer__nav-list">
+								<li><a href="#">О магазине</a></li>
+								<li><a href="#">Контакты</a></li>
+								<li><a href="#">Вакансии</a></li>
+							</ul>
+						</div>
+						<div class="footer__nav-item">
+							<div class="footer__nav-title">Интернет-магазин</div>
+							<ul class="footer__nav-list">
+								<li><a href="#">Каталог товаров</a></li>
+								<li><a href="#">Оплата и доставка</a></li>
+								<li><a href="#">Бонусная программа</a></li>
+								<li><a href="#">Политика конфиденциальности</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__phone">
+						<div class="footer__phone-title">Проверить наличие, забронировать, <br>задать вопросы:</div>
+						<a href="tel:+74852725161" class="footer__phone-number">+7 4852 72-51-61</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container">
+				<div class="footer__bottom-box">
+					<div class="footer__copy">1996-2019, ООО «Прогресс-96»</div>
+					<div class="footer__payments">
+						<div class="footer__payments-title">Принимаем к оплате:</div>
+						<ul class="footer__payments-list">
+							<li><img src="img/img-payment-1.png" alt=""></li>
+							<li><img src="img/img-payment-2.png" alt=""></li>
+							<li><img src="img/img-payment-3.png" alt=""></li>
+						</ul>
+					</div>
+					<a href="#" class="footer__creator">
+						<div class="footer__creator-title">Создание <br>сайта —</div>
+						<figure class="footer__creator-logo">
+							<img src="img/img-creator.svg" alt="">
+						</figure>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 	<div hidden>
 
@@ -169,7 +251,7 @@
 	<!-- Load Scripts Start -->
 	<!-- <script src="libs/jquery/jquery-3.1.1.min.js" defer></script> -->
 	<script src="js/scripts.js" defer></script>
-	<script src="js/common.js" defer></script>
+	<script src="js/main.js" defer></script>
 	<!-- Load Scripts End -->
 
 </body>

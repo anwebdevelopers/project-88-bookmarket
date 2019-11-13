@@ -136,12 +136,20 @@ body {
 	&:hover, &:active {
 		background-color: $color-accent;
 	}
+
+	&.button__color_accent {
+		background-color: $color-accent;
+		&:hover, &:active {
+			background-color: $color-main;
+		}
+	}
 }
 
+
 .text {
-	&:not( :first-child ) {
-		margin-top: 6rem;
-	}
+	//&:not( :first-child ) {
+	//	margin-top: 6rem;
+	//}
 
 	&:after {
 		content: '';
@@ -158,10 +166,10 @@ body {
 		// color: #3436c0;
 	}
 	h1, h2, h3, h4, h5, h6, p, ul, ol, img, blockquote {
-		&:not( [ class*="align-" ] ) {
-			margin-top: 5rem;
+		&:not( [ class*="align-" ] ):not( :first-child ) {
+			margin-top: 2rem;
 		}
-		margin-bottom: 5rem;
+		margin-bottom: 2rem;
 	}
 	ul,ol {
 		li {
@@ -267,14 +275,44 @@ body {
     }
 }
 
+
+@media only screen and (max-width : 1280px) {
+	html {
+		font-size: 9px;
+	}
+}
+
+@media only screen and (max-width : 1024px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+	//html {
+	//	font-size: 8px;
+	//}
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}
+
 //Custom Styles Here
 @import 'components/header.scss';
-
-
+@import 'components/footer.scss';
+@import 'components/banners.scss';
+@import 'components/intro.scss';
 
 //ALWAYS END
 
 //Load Libs
-//@import 'app/libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css';
+@import '../../app/libs/swiper/css/swiper.min';
 //@import 'app/libs/magnific-popup/dist/magnific-popup.css';
 //@import 'build/scss/components/magnific-popup.scss';
