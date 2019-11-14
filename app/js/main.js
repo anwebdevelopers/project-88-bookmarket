@@ -25,7 +25,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
             }
         } );
 
-        $( window ).on( 'resize', function( event ) {
+        window.addEventListener( 'resize', function() {
             if ( window.outerWidth >= 1024 ) {
                 $buttonNav.removeAttr( 'active' );
                 $elemNav.css('display', '');
@@ -52,11 +52,16 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
                 .after( '<div class="banners__nav"><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div>' ).after( '<div class="banners__dots"></div>' );
 
             const bannersSwiper = new Swiper( $banners__box.find( '.banners__container' ), {
-                autoPlay: true,
+
                 speed: 800,
                 spaceBetween: 0,
                 autoHeight: true,
                 loop: true,
+
+                autoplay: {
+                    delay: 5000,
+                },
+
                 // containerModifierClass: 'banners__box',
                 // wrapperClass: 'banners__wrapper',
                 // slideClass: 'banners__item',
@@ -100,6 +105,61 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
             } );
 
             // bannersSwiper.destroy(true, true);
+
+        } );
+
+    } ( jQuery ) );
+
+    /*******************************************************/
+    //GOODS SLIDER
+    /*******************************************************/
+    ( function( $ ) {
+
+        $( '.goods-slider' ).each( function () {
+
+            const $goodsSlider = $( this );
+            $goodsSlider.find( '.goods__item' )
+                .addClass( 'swiper-slide' )
+                .wrapAll( '<div class="goods__container swiper-container"><div class="goods__wrapper swiper-wrapper"></div></div>' )
+                .end()
+                .find( '.goods__container' )
+                .after( '<div class="goods__nav"><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div>' ).after( '<div class="goods__dots"></div>' );
+
+            const goodsSwiper = new Swiper( $goodsSlider.find( '.goods__container' ), {
+
+                slidesPerView: 4,
+                speed: 800,
+                spaceBetween: 20,
+                loop: true,
+
+                autoplay: {
+                    delay: 5000,
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                breakpoints: {
+                    1025: {
+                        slidesPerView: 4,
+                    },
+                    769: {
+                        slidesPerView: 3,
+                    },
+                    481: {
+                        slidesPerView: 2,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    }
+                },
+            } );
+
+            window.addEventListener( 'resize', function () {
+                goodsSwiper.updateSize();
+            } );
 
         } );
 

@@ -137,7 +137,7 @@ body {
 		background-color: $color-accent;
 	}
 
-	&.button__color_accent {
+	&.button_color_accent {
 		background-color: $color-accent;
 		&:hover, &:active {
 			background-color: $color-main;
@@ -145,6 +145,22 @@ body {
 	}
 }
 
+.heading {
+	margin: 0;
+	font-size: 2.8rem;
+	line-height: 1.5;
+	font-weight: 500;
+
+	display: flex;
+	align-items: center;
+	&:after {
+		content: '';
+		flex: 1 1 auto;
+		height: 1px;
+		margin-left: 3%;
+		background-color: $color-accent;
+	}
+}
 
 .text {
 	//&:not( :first-child ) {
@@ -309,6 +325,11 @@ body {
 @import 'components/footer.scss';
 @import 'components/banners.scss';
 @import 'components/intro.scss';
+@import 'components/carousel.scss';
+@import 'components/goods.scss';
+@import 'components/articles.scss';
+@import 'components/catalog.scss';
+
 
 //ALWAYS END
 

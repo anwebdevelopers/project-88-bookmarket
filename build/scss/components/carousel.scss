@@ -1,0 +1,29 @@
+.carousel {
+    padding: 3rem 0;
+    
+    &.carousel_background_green {
+        color: #fff;
+        background-color: #33A159;
+        .heading {
+            &:after {
+                background-color: currentColor;
+            }
+        }
+        .goods {
+            color: #fff;
+            .goods__item {
+                border-color: #00C156;
+                background-color: #00C156;
+
+                &:hover, &:active {
+                    border-color: #01eb69;
+                }
+                .goods__button {
+                    .button {
+                        border: 1px solid currentColor;
+                    }
+                }
+            }
+        }
+    }
+}
