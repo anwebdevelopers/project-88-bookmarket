@@ -1,0 +1,121 @@
+.filter {
+    margin-top: 2rem;
+    padding: .5rem 2rem;
+    border-radius: 2rem;
+    background-color: #F2F2F2;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    > * {
+        flex: 0 1 auto;
+        &:not( :last-child ) {
+            margin-right: 5%;
+        }
+    }
+}
+
+.filter__select {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.filter__select-title {
+    flex: 0 1 auto;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+.filter__select-select {
+    flex: 0 1 auto;
+    @include input;
+    display: block;
+    width: auto;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #00C156;
+}
+.filter__check {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    display: block;
+}
+.filter__check-input {
+    display: none;
+
+    + .filter__check-title {
+        font-size: 1.4rem;
+
+        padding-left: 3rem;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -.1em;
+            width: 2rem;
+            height: 2rem;
+            border-radius: .5rem;
+            color: #C4C4C4;
+            background-color: currentColor;
+            box-shadow: inset 0 0 0 .5rem currentColor;
+        }
+    }
+
+    &:checked {
+        + .filter__check-title {
+            &:before {
+                background-color: $color-main;
+            }
+        }
+    }
+}
+.filter__view {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.filter__view-title {
+    flex: 0 1 auto;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+.filter__view-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.filter__view-item {
+    display: block;
+    flex: 0 0 auto;
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+}
+.filter__view-item-input {
+    display: none;
+    &:checked {
+        + .filter__view-item-icon {
+            svg {
+                color: $color-main;
+            }
+        }
+    }
+}
+.filter__view-item-icon {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    svg {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        fill: currentColor;
+    }
+}

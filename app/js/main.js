@@ -125,9 +125,11 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
                 .find( '.goods__container' )
                 .after( '<div class="goods__nav"><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div>' ).after( '<div class="goods__dots"></div>' );
 
+            const isCatalog = $goodsSlider.closest('.catalog__main').length;
+
             const goodsSwiper = new Swiper( $goodsSlider.find( '.goods__container' ), {
 
-                slidesPerView: 4,
+                slidesPerView: isCatalog ? 3 : 4,
                 speed: 800,
                 spaceBetween: 20,
                 loop: true,
@@ -141,7 +143,23 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
                     prevEl: '.swiper-button-prev',
                 },
 
-                breakpoints: {
+                breakpoints: isCatalog ?
+                {
+                    1025: {
+                        slidesPerView: 3,
+                    },
+                    // 769: {
+                    //     slidesPerView: 3,
+                    // },
+                    481: {
+                        slidesPerView: 2,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    }
+                }
+                :
+                {
                     1025: {
                         slidesPerView: 4,
                     },
@@ -164,4 +182,23 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
         } );
 
     } ( jQuery ) );
+
+    /*******************************************************/
+    //ACCORDION
+    /*******************************************************/
+    $('.accordion').each(function() {
+        const $this = $(this);
+
+        ($this.hasClass('current') || $this.find('.current').length) ? $this.addClass('active') : $this.children('.accordion__box').hide();
+    }).on('click', '.accordion__title', function(event) {
+        event.stopPropagation();
+
+        if (! $(this).closest('.accordion').hasClass('active')) {
+            event.preventDefault();
+            $(this).closest('.accordion').addClass('active')
+                .children('.accordion__box').slideDown(200).end()
+                .siblings().removeClass('active')
+                .children('.accordion__box').slideUp(200);
+        }
+    });
 });

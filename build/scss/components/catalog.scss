@@ -11,7 +11,9 @@
 .catalog__menu-title {
     margin: 0;
     font-size: 2.4rem;
+    line-height: 1.1;
     font-weight: 500;
+    color: #333333;
 }
 .catalog__main {
     flex: 0 0 auto;
@@ -32,6 +34,15 @@
         &:not( :first-child ) {
             margin-top: 1rem;
         }
+        &.active {
+            > a {
+                text-shadow: 0 0 currentColor;
+                color: #000;
+            }
+            > ul {
+                display: block;
+            }
+        }
         a {
             text-decoration: none;
             color: inherit;
@@ -45,23 +56,43 @@
             &.active {
                 text-shadow: 0 0 currentColor;
             }
+            &[data-count] {
+                display: flex;
+                justify-content: space-between;
+                &:after {
+                    content: attr(data-count);
+                    display: block;
+                    flex: 0 0 auto;
+                    margin-top: .3em;
+                    margin-left: .5rem;
+                    font-size: 1.2rem;
+                    opacity: .5;
+                }
+            }
         }
         ul {
-            margin: 2rem 0 0 0;
-            padding: 0;
+            //display: none;
+            padding: 1.5rem 0 0 0;
+            margin: 0;
             list-style: none;
             font-size: 1.4rem;
             li {
-                margin-top: .3rem;
+                &:not(:first-child) {
+                    margin-top: .3rem;
+                }
                 a {
                     padding-left: 2rem;
-                    &.active {
-                        position: relative;
+                    position: relative;
+                }
+                &.current {
+                    > a {
+                        text-shadow: 0 0 currentColor;
+                        color: #000;
                         &:before {
                             content: '';
                             position: absolute;
                             left: 0;
-                            top: .5em;
+                            top: .45em;
                             width: .5rem;
                             height: .5rem;
                             border-radius: 50%;
@@ -72,4 +103,53 @@
             }
         }
     }
+}
+
+.catalog__section {
+    margin-top: 5rem;
+    //+ .section {
+    //    margin-top: 5rem;
+    //}
+}
+.catalog__section-title {
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 1.14;
+    margin: 0;
+    color: #000;
+}
+
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width : 1024px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .catalog__box {
+        display: block;
+    }
+    .catalog__menu {
+        width: auto;
+    }
+    .catalog__main {
+        width: auto;
+        margin-left: 0;
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
 }

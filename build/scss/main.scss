@@ -161,7 +161,16 @@ body {
 		background-color: $color-accent;
 	}
 }
-
+.title {
+	margin: 0;
+	font-size: 3.2rem;
+	font-weight: 500;
+	line-height: 1;
+	color: #000;
+	&:not(:first-child) {
+		margin-top: 4rem;
+	}
+}
 .text {
 	//&:not( :first-child ) {
 	//	margin-top: 6rem;
@@ -291,6 +300,118 @@ body {
     }
 }
 
+.breadcrumbs {
+	margin: .5rem 0 0 0;
+	padding: 0;
+	list-style: none;
+
+
+	display: flex;
+	flex-wrap: wrap;
+	li {
+		a {
+			text-decoration: none;
+			color: inherit;
+			display: inline-block;
+			vertical-align: baseline;
+
+			transition: .3s;
+
+			&:hover, &:active {
+				color: $color-accent
+			}
+
+			position: relative;
+			padding-right: 2rem;
+			margin-right: 1rem;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%) rotate(-45deg);
+				width: .7rem;
+				height: .7rem;
+				border-right: 2px solid $color-accent;
+				border-bottom: 2px solid $color-accent;
+			}
+		}
+	}
+}
+
+.pagination {
+	margin: 6rem 0 0 0;
+	padding: 0;
+	list-style: none;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	li {
+		flex: 0 0 auto;
+		margin: .25rem;
+		a {
+			text-decoration: none;
+			color: inherit;
+			display: block;
+			width: 3.5rem;
+			height: 3.5rem;
+			line-height: 3.5rem;
+			font-size: 1.4rem;
+			border: 1px solid #E3E3E3;
+			border-radius: 50%;
+			text-align: center;
+			transition: .3s;
+
+			&:hover, &:active {
+				border-color: $color-accent;
+			}
+		}
+		&.current {
+			a {
+				border-color: $color-accent;
+				background-color: $color-accent;
+			}
+		}
+		&.pagination__item_style_prev,
+		&.pagination__item_style_next {
+			a {
+				background-color: #E3E3E3;
+
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					width: 1rem;
+					height: 1rem;
+					border-left: 3px solid $color-accent;
+					border-top: 3px solid $color-accent;
+				}
+			}
+		}
+		&.pagination__item_style_prev {
+			a {
+				&:before {
+					left: calc(50% - .3rem);
+					transform: translateY(-50%) rotate(-45deg);
+				}
+			}
+		}
+
+		&.pagination__item_style_next {
+			a {
+				&:before {
+					right: calc(50% - .3rem);
+					transform: translateY(-50%) rotate(135deg);
+				}
+			}
+		}
+	}
+}
 
 @media only screen and (max-width : 1280px) {
 	html {
@@ -329,6 +450,7 @@ body {
 @import 'components/goods.scss';
 @import 'components/articles.scss';
 @import 'components/catalog.scss';
+@import 'components/filter.scss';
 
 
 //ALWAYS END
