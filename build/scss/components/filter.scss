@@ -43,35 +43,35 @@
     display: block;
 }
 .filter__check-input {
-    display: none;
-
-    + .filter__check-title {
-        font-size: 1.4rem;
-
-        padding-left: 3rem;
-        position: relative;
-
-        &:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: -.1em;
-            width: 2rem;
-            height: 2rem;
-            border-radius: .5rem;
-            color: #C4C4C4;
-            background-color: currentColor;
-            box-shadow: inset 0 0 0 .5rem currentColor;
-        }
-    }
-
-    &:checked {
-        + .filter__check-title {
-            &:before {
-                background-color: $color-main;
-            }
-        }
-    }
+    //display: none;
+    //
+    //+ .filter__check-title {
+    //    font-size: 1.4rem;
+    //
+    //    padding-left: 3rem;
+    //    position: relative;
+    //
+    //    &:before {
+    //        content: '';
+    //        position: absolute;
+    //        left: 0;
+    //        top: -.1em;
+    //        width: 2rem;
+    //        height: 2rem;
+    //        border-radius: .5rem;
+    //        color: #C4C4C4;
+    //        background-color: currentColor;
+    //        box-shadow: inset 0 0 0 .5rem currentColor;
+    //    }
+    //}
+    //
+    //&:checked {
+    //    + .filter__check-title {
+    //        &:before {
+    //            background-color: $color-main;
+    //        }
+    //    }
+    //}
 }
 .filter__view {
     margin-top: .5rem;

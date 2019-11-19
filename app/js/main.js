@@ -186,19 +186,119 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     /*******************************************************/
     //ACCORDION
     /*******************************************************/
-    $('.accordion').each(function() {
-        const $this = $(this);
 
-        ($this.hasClass('current') || $this.find('.current').length) ? $this.addClass('active') : $this.children('.accordion__box').hide();
-    }).on('click', '.accordion__title', function(event) {
-        event.stopPropagation();
+    ( function( $ ) {
 
-        if (! $(this).closest('.accordion').hasClass('active')) {
-            event.preventDefault();
-            $(this).closest('.accordion').addClass('active')
-                .children('.accordion__box').slideDown(200).end()
-                .siblings().removeClass('active')
-                .children('.accordion__box').slideUp(200);
-        }
-    });
+        $('.accordion').each(function() {
+            const $this = $(this);
+
+            ($this.hasClass('current') || $this.find('.current').length) ? $this.addClass('active') : $this.children('.accordion__box').hide();
+        }).on('click', '.accordion__title', function(event) {
+            event.stopPropagation();
+
+            if (! $(this).closest('.accordion').hasClass('active')) {
+                event.preventDefault();
+                $(this).closest('.accordion').addClass('active')
+                    .children('.accordion__box').slideDown(200).end()
+                    .siblings().removeClass('active')
+                    .children('.accordion__box').slideUp(200);
+            }
+        });
+
+    } ( jQuery ) );
+
+
+    /*******************************************************/
+    //CARD GALLERY
+    /*******************************************************/
+
+    ( function( $ ) {
+
+        $('.card__gallery').each(function() {
+            const $card__gallery = $( this );
+            $card__gallery.find( '.card__gallery-item' )
+                .addClass( 'swiper-slide' )
+                .wrapAll( '<div class="card__gallery-container swiper-container"><div class="card__gallery-wrapper swiper-wrapper"></div></div>' )
+                .end()
+                .find( '.card__gallery-container' )
+                .after( '<div class="card__gallery-thumbs"><div class="card__gallery-thumbs-container swiper-container"><div class="card__gallery-thumbs-wrapper swiper-wrapper"></div></div></div>' )
+                .end()
+                .find( '.card__gallery-item img' ).each(function () {
+                    $( '<div class="card__gallery-thumbs-item swiper-slide"></div>' ).append($(this).clone()).appendTo($card__gallery.find( '.card__gallery-thumbs-wrapper' ));
+                });
+
+            const cardGalleryThumbsSwiper = new Swiper( $card__gallery.find( '.card__gallery-thumbs-container' ), {
+                slidesPerView: 5,
+                spaceBetween: 5,
+                // loop: true,
+                // freeMode: true,
+                // watchSlidesVisibility: true,
+                // watchSlidesProgress: true,
+                autoplay: {
+                    delay: 5000,
+                },
+            });
+
+
+            const cardGallerySwiper = new Swiper( $card__gallery.find( '.card__gallery-container' ), {
+
+                speed: 800,
+                spaceBetween: 0,
+                // autoHeight: true,
+                loop: true,
+                thumbs: {
+                    swiper: cardGalleryThumbsSwiper
+                }
+
+                // autoplay: {
+                //     delay: 5000,
+                // },
+
+                // containerModifierClass: 'card__gallery',
+                // wrapperClass: 'card__gallery-wrapper',
+                // slideClass: 'card__gallery-item',
+                // navigation: {
+                //     nextEl: '.swiper-button-next',
+                //     prevEl: '.swiper-button-prev',
+                // },
+                // pagination: {
+                //     el: '.card__gallery-dots',
+                //     clickable: true,
+                //     type: 'bullets',
+                // },
+                // on: {
+                //     init: function () {
+                //
+                //         const thisSwiper = this;
+                //
+                //         $( thisSwiper.slides ).each( function ( i ) {
+                //
+                //             const itemIndex = + ( $( this ).attr( 'data-swiper-slide-index' ) ? $( this ).attr( 'data-swiper-slide-index' ) : i ) + 1;
+                //
+                //             $( this ).attr( 'data-count', itemIndex < 10 ? ( '0' + itemIndex ) : itemIndex );
+                //         } );
+                //     },
+                //     paginationRender: function () {
+                //
+                //         const thisSwiper = this;
+                //
+                //         $( thisSwiper.pagination.bullets ).each( function ( i ) {
+                //
+                //             const itemIndex = i;
+                //
+                //             $( this ).text( $( thisSwiper.slides ).eq( itemIndex ).find( '.card__gallery-item-title' ).text() ).attr( 'data-count', itemIndex < 10 ? ( '0' + ( itemIndex + 1 ) ) : itemIndex + 1 );
+                //         } );
+                //     }
+                // },
+            } );
+
+            window.addEventListener( 'resize', function () {
+                cardGalleryThumbsSwiper.updateSize();
+                cardGallerySwiper.updateSize();
+            } );
+        });
+
+    } ( jQuery ) );
+
+
 });

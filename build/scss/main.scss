@@ -143,6 +143,15 @@ body {
 			background-color: $color-main;
 		}
 	}
+	svg,
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 100%;
+		width: auto;
+		height: auto;
+		margin-right: .5rem;
+	}
 }
 
 .heading {
@@ -171,6 +180,19 @@ body {
 		margin-top: 4rem;
 	}
 }
+
+.subtitle {
+	margin-top: 1rem;
+	font-size: 1.8rem;
+	a {
+		color: $color-main;
+		transition: .3s ease;
+		&:hover, &:active {
+			color: $color-accent;
+		}
+	}
+}
+
 .text {
 	//&:not( :first-child ) {
 	//	margin-top: 6rem;
@@ -451,7 +473,8 @@ body {
 @import 'components/articles.scss';
 @import 'components/catalog.scss';
 @import 'components/filter.scss';
-
+@import 'components/card.scss';
+@import 'components/form.scss';
 
 //ALWAYS END
 
