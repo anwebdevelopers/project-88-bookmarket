@@ -8,7 +8,7 @@
     flex: 0 0 auto;
     width: 25%;
     + .page__main {
-        margin-left: 2rem;
+        margin-left: 3rem;
     }
 }
 .page__aside-title {
@@ -20,9 +20,9 @@
 }
 .page__main {
     flex: 0 0 auto;
-    width: calc(75% - 2rem);
+    width: calc(75% - 3rem);
     + .page__aside {
-        margin-left: 2rem;
+        margin-left: 3rem;
     }
 }
 .menu {

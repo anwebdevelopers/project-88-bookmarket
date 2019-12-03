@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42f91a77-5f6e-47ea-8c83-f0eb74a5d28b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/basket.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/img-basket-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/img-basket-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/scss/components/basket.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/scss/components/order.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/catalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/basket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.defaults.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.defaults.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.directions.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.directions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.fingers.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.fingers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.pageScroll.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.pageScroll.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.phases.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.fn.swipe.phases.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/$.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/styles/jsdoc.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/TouchSwipe-Jquery-Plugin-master/TouchSwipe-Jquery-Plugin-master/docs/styles/jsdoc.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scss/components/basket.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build/scss/components/basket.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/scss/components/catalog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build/scss/components/catalog.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/scss/components/goods.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build/scss/components/goods.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build/scss/main.scss" afterDir="false" />
     </list>
     <list id="bf1cc2a1-eed9-4673-be9b-2a8bb0ebd5de" name="ignore" comment="ignore" />
@@ -100,7 +85,8 @@
       <workItem from="1575020126634" duration="152000" />
       <workItem from="1575020287695" duration="4556000" />
       <workItem from="1575338457436" duration="281000" />
-      <workItem from="1575338747042" duration="5574000" />
+      <workItem from="1575338747042" duration="5650000" />
+      <workItem from="1575365556832" duration="7248000" />
     </task>
     <task id="LOCAL-00001" summary="Стартовый коммит">
       <created>1565692588708</created>
@@ -123,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574164231108</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="03.12.2019">
+      <created>1575344382446</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575344382446</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,13 +156,18 @@
     <MESSAGE value="Стартовый коммит" />
     <MESSAGE value="18.11.2019" />
     <MESSAGE value="19.11.2019" />
-    <option name="LAST_COMMIT_MESSAGE" value="19.11.2019" />
+    <MESSAGE value="03.12.2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="03.12.2019" />
   </component>
   <component name="WindowStateProjectService">
     <state x="719" y="362" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1575020276978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="719" y="362" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575020276978" />
+    <state x="508" y="113" key="CommitChangelistDialog2" timestamp="1575344379947">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="508" y="113" key="CommitChangelistDialog2/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575344379947" />
     <state x="740" y="264" key="FileChooserDialogImpl" timestamp="1575020273491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -178,10 +176,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575342620497" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1575338749870">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1575344383927">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575338749870" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575344383927" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1575365588413">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575365588413" />
     <state x="591" y="73" width="737" height="894" key="find.popup" timestamp="1575022518357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
