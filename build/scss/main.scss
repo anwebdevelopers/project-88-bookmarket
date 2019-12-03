@@ -181,6 +181,12 @@ body {
 	}
 }
 
+h2.title {
+	font-size: 2.8rem;
+	font-weight: 400;
+	color: #333;
+}
+
 .subtitle {
 	margin-top: 1rem;
 	font-size: 1.8rem;
@@ -475,6 +481,7 @@ body {
 @import 'components/filter.scss';
 @import 'components/card.scss';
 @import 'components/form.scss';
+@import 'components/basket.scss';
 
 //ALWAYS END
 

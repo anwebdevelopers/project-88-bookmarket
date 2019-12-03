@@ -125,7 +125,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
                 .find( '.goods__container' )
                 .after( '<div class="goods__nav"><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div>' ).after( '<div class="goods__dots"></div>' );
 
-            const isCatalog = $goodsSlider.closest('.catalog__main').length;
+            const isCatalog = $goodsSlider.closest('.page__main').length;
 
             const goodsSwiper = new Swiper( $goodsSlider.find( '.goods__container' ), {
 
@@ -300,5 +300,21 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
 
     } ( jQuery ) );
 
+
+    /*******************************************************/
+    //QUANTITY
+    /*******************************************************/
+    $('.quantity').on('click', '.quantity__button', function() {
+        const $this = $(this),
+            $input = $this.siblings('.quantity__input'),
+            value = Number($input.val());
+        if($this.hasClass('quantity__button_plus')) {
+            $input.val(value + 1);
+        } else {
+            if (value > 1) {
+                $input.val(value - 1);
+            }
+        }
+    });
 
 });

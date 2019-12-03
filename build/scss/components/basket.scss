@@ -1,0 +1,233 @@
+.basket {
+    margin-top: 3rem;
+}
+
+.basket__head {
+    display: flex;
+    //flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: #F7F7F7;
+}
+.basket__bonus {
+    @include input;
+    flex: 0 1 auto;
+    width: 100%;
+    flex-basis: 38rem;
+    height: 5rem;
+    padding: 1.5rem 2rem;
+    margin-right: 3%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5rem;
+    font-size: 1.6rem;
+    color: #9B9B9B;
+    border: 1px solid #E3E3E3;
+    background-color: #fff;
+    transition: .3s;
+
+    &:hover, &:focus {
+        border-color: $color-main;
+    }
+}
+.basket__summ {
+    flex: 0 0 auto;
+    margin-right: 3%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: flex-end;
+}
+.basket__sum-title {
+    flex: 0 0 auto;
+    margin-right: 1rem;
+
+    font-size: 1.8rem;
+}
+.basket__summtext {
+    flex: 0 0 auto;
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: .9;
+    color: #333;
+}
+
+.basket__submit {
+    flex: 0 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.basket__box {
+    margin-top: 3rem;
+    padding: 0 3rem;
+    border-radius: 1rem;
+    border: 1px solid #E3E3E3;
+
+    display: table;
+    > * {
+        display: table-row;
+        &:not(:last-child) {
+            > * {
+                border-bottom: 1px solid #FC9600;
+            }
+        }
+        > * {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            display: table-cell;
+            vertical-align: top;
+            &:not(:last-child) {
+                padding-right: 2rem;
+            }
+        }
+    }
+}
+
+.basket__item {
+
+}
+.basket__item-image {
+    margin: 0;
+    min-width: 8rem;
+    img {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.basket__item-content {
+
+}
+.basket__item-title {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-shadow: 0 0 currentColor;
+    color: #000;
+    a {
+        text-decoration: none;
+        color: inherit;
+        transition: .3s;
+        &:hover, &:active {
+            color: $color-accent;
+        }
+    }
+}
+.basket__item-text {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    a {
+        text-decoration: none;
+        color: inherit;
+        transition: .3s;
+        &:hover, &:active {
+            color: $color-accent;
+        }
+    }
+}
+.basket__item-price {
+
+}
+.basket__item-price-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #000;
+}
+.basket__item-price-text {
+    //margin-top: .5rem;
+
+    font-size: 1.4rem;
+    white-space: nowrap;
+    color: #9B9B9B;
+}
+.basket__item-qty {
+
+}
+.quantity {
+    display: flex;
+    align-items: center;
+}
+.quantity__input {
+    @include input;
+    flex: 0 1 auto;
+    width: 5rem;
+    height: 5rem;
+    padding: 1.5rem 0;
+    border-radius: 50%;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+
+    color: #000;
+    border: 1px solid #E3E3E3;
+    background-color: #fff;
+    transition: .3s;
+
+    &:hover, &:focus {
+        border-color: $color-main;
+    }
+}
+.quantity__button {
+    @include btn;
+    flex: 0 0 auto;
+    width: 4rem;
+    height: 4rem;
+}
+.quantity__button_minus {
+    background-image: linear-gradient($color-accent,$color-accent);
+    background-size: 13px 3px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.quantity__button_plus {
+    background-image: linear-gradient($color-accent,$color-accent),linear-gradient($color-accent,$color-accent);
+    background-size: 13px 3px, 3px 13px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.basket__item-qty-text {
+    margin-top: .5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #9B9B9B;
+}
+.basket__item-summ {
+    font-size: 3rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #000;
+}
+.basket__item-delete a {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    transform: rotate(45deg);
+    margin-top: 1rem;
+    background-image: linear-gradient(#DE2929,#DE2929),linear-gradient(#DE2929,#DE2929);
+    background-size: 13px 3px, 3px 13px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.page__aside-button {
+    margin-top: 3rem;
+}
+.page__aside-subtitle {
+    margin: 3rem 0 0 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #333;
+}
+.page__aside-text {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}

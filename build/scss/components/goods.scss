@@ -126,7 +126,7 @@
 
     position: relative;
 }
-.catalog__main {
+.page__main {
     .goods {
         &.goods-slider {
             .goods__nav {
@@ -209,7 +209,7 @@
     .goods__item {
         width: calc(33.3333% - 2rem);
     }
-    .catalog__main {
+    .page__main {
         .goods__item {
             width: calc(50% - 2rem);
         }
@@ -220,7 +220,7 @@
     .goods__item {
         width: calc(50% - 2rem);
     }
-    .catalog__main {
+    .page__main {
         .goods {
             &.goods-slider {
                 .goods__nav {
@@ -244,7 +244,7 @@
     .goods__item {
         width: auto;
     }
-    .catalog__main {
+    .page__main {
         .goods__item {
             width: auto;
         }
