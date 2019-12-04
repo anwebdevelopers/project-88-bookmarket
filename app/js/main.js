@@ -304,17 +304,61 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     /*******************************************************/
     //QUANTITY
     /*******************************************************/
-    $('.quantity').on('click', '.quantity__button', function() {
-        const $this = $(this),
-            $input = $this.siblings('.quantity__input'),
-            value = Number($input.val());
-        if($this.hasClass('quantity__button_plus')) {
-            $input.val(value + 1);
-        } else {
-            if (value > 1) {
-                $input.val(value - 1);
+
+    ( function( $ ) {
+        $('.quantity').on('click', '.quantity__button', function() {
+            const $this = $(this),
+                $input = $this.siblings('.quantity__input'),
+                value = Number($input.val());
+            if($this.hasClass('quantity__button_plus')) {
+                $input.val(value + 1);
+            } else {
+                if (value > 1) {
+                    $input.val(value - 1);
+                }
             }
+        });
+    } ( jQuery ) );
+
+    /*******************************************************/
+    //TABS
+    /*******************************************************/
+    ( function( $ ) {
+        $('[data-trigger]').each(function () {
+            const $dataTrigger = $(this).attr('data-trigger');
+
+            $('[data-listener=' + $dataTrigger + ']').each(function () {
+                $(this).find('[data-listener-' + $dataTrigger + ']').not(':first').hide();
+            });
+
+            $(this).find('[data-trigger-' + $dataTrigger + ']').on('click', function () {
+                $('[data-listener-' + $dataTrigger + '="' + $(this).attr('data-trigger-' + $dataTrigger ) + '"]').show().siblings('[data-listener-' + $dataTrigger + ']').hide();
+            });
+        });
+    } ( jQuery ) );
+
+    /*******************************************************/
+    //ORDER STEPS
+    /*******************************************************/
+    $('.order__item').each(function () {
+        if ($(this).index() > 0) $(this).find('> *:not(.order__head)').hide();
+    }).on('click', '.order__prev, .order__next', function (event) {
+        event.preventDefault();
+
+        if ( $(event.target).hasClass('order__next') ) {
+
+
+            $(event.target).closest('.order__item').removeClass('current').addClass('passed').next('.order__item').addClass('current').find('> *:not(.order__head)').slideDown(600);
+
+            $('html, body').animate({scrollTop: $(event.target).closest('.order__item').next('.order__item').offset().top }, 600, 'swing');
+
+        } else if (( $(event.target).hasClass('order__prev') )) {
+
+            $(event.target).closest('.order__item').removeClass('current').find('> *:not(.order__head)').slideUp(600).end().prev('.order__item').removeClass('passed').addClass('current').find('> *:not(.order__head)').slideDown(600);
+
+            $('html, body').animate({scrollTop: $(event.target).closest('.order__item').prev('.order__item').offset().top }, 600, 'swing')
         }
-    });
+
+    })
 
 });

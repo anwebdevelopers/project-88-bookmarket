@@ -123,6 +123,10 @@ body {
 	clear: both;
 }
 
+//[data-listener]:not([active]) {
+//	display: none;
+//}
+
 .button {
 	@include btn;
 	padding: 1.2rem 2.5rem;
