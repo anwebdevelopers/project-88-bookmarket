@@ -135,6 +135,7 @@ body {
 	color: #fff;
 	border-radius: 5rem;
 	background-color: $color-main;
+	text-align: center;
 	transition: .3s;
 
 	&:hover, &:active {
@@ -192,7 +193,7 @@ h2.title {
 }
 
 .subtitle {
-	margin-top: 1rem;
+	margin: 1rem 0 0 0;
 	font-size: 1.8rem;
 	a {
 		color: $color-main;
@@ -204,9 +205,9 @@ h2.title {
 }
 
 .text {
-	//&:not( :first-child ) {
-	//	margin-top: 6rem;
-	//}
+	&:not( :first-child ) {
+		margin-top: 3rem;
+	}
 
 	&:after {
 		content: '';
@@ -247,16 +248,16 @@ h2.title {
 	a:not( [ class ] ) {
 		text-decoration: none;
 		padding: 0 .3rem 0 .3rem;
-		color: inherit;
-		background-image: linear-gradient($color-main, $color-main);
-		background-position: 0 100%;
-		background-size: 100% 1px;
-		background-repeat: no-repeat;
+		color: $color-main;
+		//background-image: linear-gradient($color-main, $color-main);
+		//background-position: 0 100%;
+		//background-size: 100% 1px;
+		//background-repeat: no-repeat;
 		transition: .3s;
 		&:active,
 		&:hover {
-			color: #fff;
-			background-size: 100% 100%;
+			color: $color-accent;
+			//background-size: 100% 100%;
 		}
 	}
 	*:first-child {
@@ -486,8 +487,10 @@ h2.title {
 @import 'components/card.scss';
 @import 'components/form.scss';
 @import 'components/basket.scss';
-@import 'components/order.scss';
-
+@import 'components/steps.scss';
+@import 'components/orders';
+@import 'components/about';
+@import "components/contacts";
 
 //ALWAYS END
 

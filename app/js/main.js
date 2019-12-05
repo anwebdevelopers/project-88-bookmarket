@@ -340,25 +340,103 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     /*******************************************************/
     //ORDER STEPS
     /*******************************************************/
-    $('.order__item').each(function () {
-        if ($(this).index() > 0) $(this).find('> *:not(.order__head)').hide();
-    }).on('click', '.order__prev, .order__next', function (event) {
-        event.preventDefault();
 
-        if ( $(event.target).hasClass('order__next') ) {
+    ( function( $ ) {
+        $('.steps__item').each(function () {
+            if ($(this).index() > 0) $(this).find('> *:not(.steps__head)').hide();
+        }).on('click', '.steps__prev, .steps__next', function (event) {
+            event.preventDefault();
+
+            if ( $(event.target).hasClass('steps__next') ) {
 
 
-            $(event.target).closest('.order__item').removeClass('current').addClass('passed').next('.order__item').addClass('current').find('> *:not(.order__head)').slideDown(600);
+                $(event.target).closest('.steps__item').removeClass('current').addClass('passed').next('.steps__item').addClass('current').find('> *:not(.steps__head)').slideDown(600);
 
-            $('html, body').animate({scrollTop: $(event.target).closest('.order__item').next('.order__item').offset().top }, 600, 'swing');
+                $('html, body').animate({scrollTop: $(event.target).closest('.steps__item').next('.steps__item').offset().top }, 600, 'swing');
 
-        } else if (( $(event.target).hasClass('order__prev') )) {
+            } else if (( $(event.target).hasClass('steps__prev') )) {
 
-            $(event.target).closest('.order__item').removeClass('current').find('> *:not(.order__head)').slideUp(600).end().prev('.order__item').removeClass('passed').addClass('current').find('> *:not(.order__head)').slideDown(600);
+                $(event.target).closest('.steps__item').removeClass('current').find('> *:not(.steps__head)').slideUp(600).end().prev('.steps__item').removeClass('passed').addClass('current').find('> *:not(.steps__head)').slideDown(600);
 
-            $('html, body').animate({scrollTop: $(event.target).closest('.order__item').prev('.order__item').offset().top }, 600, 'swing')
+                $('html, body').animate({scrollTop: $(event.target).closest('.steps__item').prev('.steps__item').offset().top }, 600, 'swing')
+            }
+        });
+    } ( jQuery ) );
+
+
+
+    //*********************************************************//
+    //YANDEX MAP
+    //*********************************************************//
+    (function ($) {
+
+        const mapElem = document.querySelector('#map');
+
+        if (mapElem) {
+
+
+            const script = document.createElement('script');
+
+            script.src = '//api-maps.yandex.ru/2.1/?lang=ru_RU';
+
+            document.getElementsByTagName('head')[0].appendChild(script);
+
+            script.onload = function () {
+
+                ymaps.ready(function () {
+
+                    const myMap = new ymaps.Map('map', {
+                        center: [57.624535, 39.889250],
+                        zoom: 16,
+                        controls: [],
+                        behaviors: ['drag', 'dblClickZoom', 'rightMouseButtonMagnifier', 'multiTouch']
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    });
+
+                    //Элементы управления
+                    myMap.controls.add('zoomControl', {
+                        size: 'small',
+                        position: {
+                            top: 'auto',
+                            right: 10,
+                            bottom: 50
+                        }
+                    });
+
+                    myMap.geoObjects.add(new ymaps.Placemark(
+                        [57.624535, 39.889250],
+                        {
+                            hintContent: 'г. Ярославль, ул. Депутатская, 7',
+                            balloonContent: 'г. Ярославль, ул. Депутатская, 7',
+                        },
+                        {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'img/icon-mark.svg',
+                            iconImageSize: [44, 60],
+                            iconImageOffset: [-22, -60],
+                        }
+                    ));
+
+
+                    const dragHandler = function () {
+                        window.innerWidth <= 1024 ? myMap.behaviors.disable('drag') : myMap.behaviors.enable('drag')
+                    };
+                    window.onload = dragHandler;
+                    window.onresize = dragHandler;
+
+                    typeof ResizeObserver === 'object' && new ResizeObserver(function (entries) {
+                        myMap.container.fitToViewport()
+                    }).observe(mapElem);
+
+                    myMap.container.fitToViewport();
+
+                });
+            }
+
         }
 
-    })
+    }(jQuery));
+
 
 });

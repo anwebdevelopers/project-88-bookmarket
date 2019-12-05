@@ -1,0 +1,111 @@
+.contacts {
+    //margin-top: 3rem;
+}
+.contacts__box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    > *[class] {
+        flex: 0 1 auto;
+        margin-top: 3rem;
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+}
+.contacts__image {
+    margin: 0;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        border-radius: 50%;
+        filter: drop-shadow(1rem 1rem 0 $color-main);
+    }
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        right: -1rem;
+        bottom: 0;
+        width: 6rem;
+        height: 11rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='68' height='111' viewBox='0 0 68 111' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34.0038 111L3.47556 48.8417C-4.78592 32.0204 2.18474 11.7023 19.045 3.45991C23.7015 1.18349 28.8183 0 34.0038 0C52.7794 0 68 15.1854 68 33.9174C68 39.0909 66.8138 44.1959 64.5321 48.8417L34.0038 111Z' fill='%23FC9600'/%3E%3Cpath d='M34 41C39.5228 41 44 36.5228 44 31C44 25.4772 39.5228 21 34 21C28.4772 21 24 25.4772 24 31C24 36.5228 28.4772 41 34 41Z' fill='white'/%3E%3C/svg%3E ");
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+}
+.contacts__address-title {
+    &:not(:first-child) {
+        margin-top: 3rem;
+    }
+    font-size: 1.6rem;
+    color: #9B9B9B;
+}
+.contacts__address-text {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #4D4D4D;
+}
+.contacts__feedback {
+
+}
+.contacts__feedback-phone {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1;
+    a {
+        text-decoration: none;
+        color: inherit;
+        transition: .3s;
+
+        &:hover, &:active {
+            color: $color-accent;
+        }
+    }
+}
+.contacts__feedback-email {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    a {
+        color: $color-main;
+        transition: .3s;
+
+        &:hover, &:active {
+            color: $color-accent;
+        }
+    }
+}
+.contacts__feedback-callback {
+    margin-top: 2rem;
+}
+.contacts__social {
+
+}
+.contacts__social-title {
+    font-size: 1.6rem;
+    color: #9B9B9B;
+}
+.contacts__social-list {
+    margin: 1rem 0 0 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+        margin: 1rem 2rem 0 0;
+        a {
+
+        }
+    }
+}
+.contacts__map {
+    margin-top: 5rem;
+    min-height: 50rem;
+}

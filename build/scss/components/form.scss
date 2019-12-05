@@ -1,26 +1,31 @@
 .input-text {
-    input {
+    span {
+
+    }
+    input, textarea {
         @include input;
-        color: inherit;
-        height: 6rem;
         width: 100%;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        font-size: 1.4rem;
-        border-bottom: 1px solid currentColor;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1));
-        background-position: 0 0;
-        background-size: 100% 0;
-        background-repeat: no-repeat;
+        height: 5rem;
+        padding: 1.5rem 2rem;
+        margin-top: 1rem;
+        border-radius: 2.5rem;
+        font-size: 1.6rem;
+        color: #9B9B9B;
+        border: 1px solid #E3E3E3;
+        background-color: #fff;
         transition: .3s;
+
+        &:hover, &:focus {
+            border-color: $color-main;
+        }
         &:focus {
 
         }
-        &:hover, &:active, &:focus {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-            background-size: 100% 100%;
-        }
+
+    }
+    textarea {
+        height: 12rem;
+        resize: vertical;
     }
 }
 .input-radio {
@@ -258,4 +263,20 @@
 }
 html:not( [dir='rtl'] ) .input-range-multiple .noUi-horizontal .noUi-handle {
     right: -1rem;
+}
+.form {
+    max-width: 56rem;
+    margin-top: 3rem;
+    padding: 3rem 0;
+    border-top: 1px solid $color-accent;
+    border-bottom: 1px solid $color-accent;
+}
+.form__item {
+    display: block;
+    &:not(:first-child) {
+        margin-top: 2rem;
+    }
+}
+.form__submit {
+    margin-top: 3rem;
 }

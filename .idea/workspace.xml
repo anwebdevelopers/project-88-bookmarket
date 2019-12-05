@@ -2,16 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42f91a77-5f6e-47ea-8c83-f0eb74a5d28b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/img/icon-delivery-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/icon-delivery-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/icon-payments-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/icon-payments-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/icon-payments-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cabinet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/contacts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/icon-mark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/icon-social-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/icon-social-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img-about-gallery-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img-about-gallery-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img-about-gallery-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img-about-gallery-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img-about-gallery-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img-about-gallery-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img-about-gallery-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img-about-gallery-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img-aside-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img-contacts.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/scss/components/about.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/scss/components/contacts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/scss/components/orders.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/basket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/category.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/scss/components/order.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build/scss/components/order.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scss/components/basket.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build/scss/components/basket.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scss/components/catalog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build/scss/components/catalog.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scss/components/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build/scss/components/form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scss/components/order.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build/scss/components/steps.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build/scss/main.scss" afterDir="false" />
     </list>
     <list id="bf1cc2a1-eed9-4673-be9b-2a8bb0ebd5de" name="ignore" comment="ignore" />
@@ -90,7 +115,8 @@
       <workItem from="1575338457436" duration="281000" />
       <workItem from="1575338747042" duration="5650000" />
       <workItem from="1575365556832" duration="7619000" />
-      <workItem from="1575427681952" duration="15706000" />
+      <workItem from="1575427681952" duration="15854000" />
+      <workItem from="1575514348603" duration="19602000" />
     </task>
     <task id="LOCAL-00001" summary="Стартовый коммит">
       <created>1565692588708</created>
@@ -127,7 +153,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575376466760</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="03.12.2019">
+      <created>1575464498699</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575464498699</updated>
+    </task>
+    <task id="LOCAL-00007" summary="04.12.2019">
+      <created>1575464522987</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575464522987</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,17 +208,18 @@
     <MESSAGE value="18.11.2019" />
     <MESSAGE value="19.11.2019" />
     <MESSAGE value="03.12.2019" />
-    <option name="LAST_COMMIT_MESSAGE" value="03.12.2019" />
+    <MESSAGE value="04.12.2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="04.12.2019" />
   </component>
   <component name="WindowStateProjectService">
     <state x="719" y="362" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1575020276978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="719" y="362" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575020276978" />
-    <state x="508" y="113" key="CommitChangelistDialog2" timestamp="1575464511334">
+    <state x="508" y="113" key="CommitChangelistDialog2" timestamp="1575464522549">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="508" y="113" key="CommitChangelistDialog2/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575464511334" />
+    <state x="508" y="113" key="CommitChangelistDialog2/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575464522549" />
     <state x="740" y="264" key="FileChooserDialogImpl" timestamp="1575020273491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -187,17 +228,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575342620497" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1575464502784">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1575464526303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575464502784" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1575427690138">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575464526303" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1575514348913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575427690138" />
-    <state x="591" y="73" width="737" height="894" key="find.popup" timestamp="1575022518357">
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575514348913" />
+    <state x="591" y="73" width="737" height="894" key="find.popup" timestamp="1575516003238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="591" y="73" width="737" height="894" key="find.popup/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575022518357" />
+    <state x="591" y="73" width="737" height="894" key="find.popup/0.0.1920.1040/-1920.1.1920.1040@0.0.1920.1040" timestamp="1575516003238" />
   </component>
 </project>

@@ -21,8 +21,7 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
-	<link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="css/main.css"></noscript>
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -126,77 +125,75 @@
 			<h1 class="title">Оформление заказа</h1>
 			<div class="page__box">
 				<div class="page__main">
-					<form action="" class="order">
-						<div class="order__item current">
-							<div class="order__head">
-								<h3 class="order__title">Товары в заказе</h3>
-								<a class="order__change">изменить</a>
+					<form action="" class="steps">
+						<div class="steps__item current">
+							<div class="steps__head">
+								<h3 class="steps__title">Товары в заказе</h3>
+								<a href="#" class="steps__change">изменить</a>
 							</div>
-							<div class="order__basket">
-								<div class="order__basket-item">
-									<figure class="order__basket-item-image">
+							<div class="steps__basket">
+								<div class="steps__basket-item">
+									<figure class="steps__basket-item-image">
 										<img src="img/img-basket-1.jpg" alt="">
 									</figure>
-									<div class="order__basket-item-content">
-										<h3 class="order__basket-item-title"><a href="#">Маркетинг от А до Я. 80 концепций, которые должен знать каждый охотник</a></h3>
-										<div class="order__basket-item-text"><a href="#">Карл Сьюзл</a></div>
+									<div class="steps__basket-item-content">
+										<h3 class="steps__basket-item-title"><a href="#">Маркетинг от А до Я. 80 концепций, которые должен знать каждый охотник</a></h3>
+										<div class="steps__basket-item-text"><a href="#">Карл Сьюзл</a></div>
 									</div>
-									<div class="order__basket-item-qty">2 шт</div>
-									<div class="order__basket-item-summ">1000 p</div>
+									<div class="steps__basket-item-qty">2 шт</div>
+									<div class="steps__basket-item-summ">1000 p</div>
 								</div>
-								<div class="order__basket-item">
-									<figure class="order__basket-item-image">
+								<div class="steps__basket-item">
+									<figure class="steps__basket-item-image">
 										<img src="img/img-basket-2.jpg" alt="">
 									</figure>
-									<div class="order__basket-item-content">
-										<h3 class="order__basket-item-title"><a href="#">Богатый папа, бедный папа</a></h3>
-										<div class="order__basket-item-text"><a href="#">Роберт Кийосаки</a></div>
+									<div class="steps__basket-item-content">
+										<h3 class="steps__basket-item-title"><a href="#">Богатый папа, бедный папа</a></h3>
+										<div class="steps__basket-item-text"><a href="#">Роберт Кийосаки</a></div>
 									</div>
-									<div class="order__basket-item-qty">1 шт</div>
-									<div class="order__basket-item-summ">1000 p</div>
+									<div class="steps__basket-item-qty">1 шт</div>
+									<div class="steps__basket-item-summ">1000 p</div>
 								</div>
 							</div>
 
-							<div class="order__footer">
-								<!--<a href="#" class="order__prev button">Назад</a>-->
-								<a href="#" class="order__next button">Далее</a>
+							<div class="steps__footer">
+								<a href="#" class="steps__next button">Далее</a>
 							</div>
 						</div>
 
-						<div class="order__item">
-							<div class="order__head">
-								<h3 class="order__title">Доставка</h3>
-								<a class="order__change">изменить</a>
+						<div class="steps__item">
+							<div class="steps__head">
+								<h3 class="steps__title">Доставка</h3>
 							</div>
-							<div class="order__box" data-trigger="delivery">
-								<div class="order__radio">
-									<label class="order__radio-item" data-trigger-delivery="1">
-										<input type="radio" name="delivery" class="order__radio-input" checked>
-										<span class="order__radio-image" data-text="500 p">
+							<div class="steps__box" data-trigger="delivery">
+								<div class="steps__radio">
+									<label class="steps__radio-item" data-trigger-delivery="1">
+										<input type="radio" name="delivery" class="steps__radio-input" checked>
+										<span class="steps__radio-image" data-text="500 p">
 											<img src="img/icon-delivery-1.svg" alt="">
 										</span>
-										<span class="order__radio-title">Доставка курьером</span>
+										<span class="steps__radio-title">Доставка курьером</span>
 									</label>
-									<label class="order__radio-item" data-trigger-delivery="2">
-										<input type="radio" name="delivery" class="order__radio-input">
-										<span class="order__radio-image" data-text="0 p">
+									<label class="steps__radio-item" data-trigger-delivery="2">
+										<input type="radio" name="delivery" class="steps__radio-input">
+										<span class="steps__radio-image" data-text="0 p">
 											<img src="img/icon-delivery-2.svg" alt="">
 										</span>
-										<span class="order__radio-title">Самовывоз из магазина</span>
+										<span class="steps__radio-title">Самовывоз из магазина</span>
 									</label>
 								</div>
-								<div class="order__aside" data-listener="delivery">
-									<div class="order__aside-item" data-listener-delivery="1">
-										<h3 class="order__aside-title">Доставка курьером</h3>
-										<div class="order__aside-text">
+								<div class="steps__aside" data-listener="delivery">
+									<div class="steps__aside-item" data-listener-delivery="1">
+										<h3 class="steps__aside-title">Доставка курьером</h3>
+										<div class="steps__aside-text">
 											Доставка осуществляется в течение 2 дней с предварительным согласованием времени и места доставки.
 											<br><br>
 											Стоимость <b>500 p</b>
 										</div>
 									</div>
-									<div class="order__aside-item" data-listener-delivery="2">
-										<h3 class="order__aside-title">Самовывоз из магазина</h3>
-										<div class="order__aside-text">
+									<div class="steps__aside-item" data-listener-delivery="2">
+										<h3 class="steps__aside-title">Самовывоз из магазина</h3>
+										<div class="steps__aside-text">
 											Доставка осуществляется в течение 2 дней с предварительным согласованием времени и места доставки.
 											<br><br>
 											Стоимость <b>0 p</b>
@@ -204,109 +201,107 @@
 									</div>
 								</div>
 							</div>
-							<div class="order__footer">
-								<a href="#" class="order__prev button">Назад</a>
-								<a href="#" class="order__next button">Далее</a>
+							<div class="steps__footer">
+								<a href="#" class="steps__prev button">Назад</a>
+								<a href="#" class="steps__next button">Далее</a>
 							</div>
 						</div>
 
-						<div class="order__item">
-							<div class="order__head">
-								<h3 class="order__title">Оплата</h3>
-								<a class="order__change">изменить</a>
+						<div class="steps__item">
+							<div class="steps__head">
+								<h3 class="steps__title">Оплата</h3>
 							</div>
-							<div class="order__box">
-								<div class="order__radio" data-trigger="payments">
-									<label class="order__radio-item"
+							<div class="steps__box">
+								<div class="steps__radio" data-trigger="payments">
+									<label class="steps__radio-item"
 										   data-trigger-payments="1">
-										<input type="radio" name="payments" class="order__radio-input" checked>
-										<span class="order__radio-image">
+										<input type="radio" name="payments" class="steps__radio-input" checked>
+										<span class="steps__radio-image">
 											<img src="img/icon-payments-1.svg" alt="">
 										</span>
-										<span class="order__radio-title">Яндекс.Касса</span>
+										<span class="steps__radio-title">Яндекс.Касса</span>
 									</label>
-									<label class="order__radio-item" data-trigger-payments="2">
-										<input type="radio" name="payments" class="order__radio-input">
-										<span class="order__radio-image">
+									<label class="steps__radio-item" data-trigger-payments="2">
+										<input type="radio" name="payments" class="steps__radio-input">
+										<span class="steps__radio-image">
 											<img src="img/icon-payments-2.svg" alt="">
 										</span>
-										<span class="order__radio-title">Банковской картой</span>
+										<span class="steps__radio-title">Банковской картой</span>
 									</label>
-									<label class="order__radio-item" data-trigger-payments="3">
-										<input type="radio" name="payments" class="order__radio-input">
-										<span class="order__radio-image">
+									<label class="steps__radio-item" data-trigger-payments="3">
+										<input type="radio" name="payments" class="steps__radio-input">
+										<span class="steps__radio-image">
 											<img src="img/icon-payments-3.svg" alt="">
 										</span>
-										<span class="order__radio-title">Наличными при получении</span>
+										<span class="steps__radio-title">Наличными при получении</span>
 									</label>
 								</div>
-								<div class="order__aside" data-listener="payments">
-									<div class="order__aside-item" data-listener-payments="1">
-										<h3 class="order__aside-title">Яндекс.Касса</h3>
-										<div class="order__aside-text">
+								<div class="steps__aside" data-listener="payments">
+									<div class="steps__aside-item" data-listener-payments="1">
+										<h3 class="steps__aside-title">Яндекс.Касса</h3>
+										<div class="steps__aside-text">
 											Предоставляет множество вариантов оплаты. Выбор осуществляется после перехода на страницу оплаты. Подтверждением платежа является электронная квитанция, которая придет вам на почту сразу после совершения платежа.
 										</div>
 									</div>
-									<div class="order__aside-item" data-listener-payments="2">
-										<h3 class="order__aside-title">Банковской картой</h3>
-										<div class="order__aside-text">
+									<div class="steps__aside-item" data-listener-payments="2">
+										<h3 class="steps__aside-title">Банковской картой</h3>
+										<div class="steps__aside-text">
 											Предоставляет множество вариантов оплаты. Выбор осуществляется после перехода на страницу оплаты. Подтверждением платежа является электронная квитанция, которая придет вам на почту сразу после совершения платежа.
 										</div>
 									</div>
-									<div class="order__aside-item" data-listener-payments="3">
-										<h3 class="order__aside-title">Наличными при получении</h3>
-										<div class="order__aside-text">
+									<div class="steps__aside-item" data-listener-payments="3">
+										<h3 class="steps__aside-title">Наличными при получении</h3>
+										<div class="steps__aside-text">
 											Предоставляет множество вариантов оплаты. Выбор осуществляется после перехода на страницу оплаты. Подтверждением платежа является электронная квитанция, которая придет вам на почту сразу после совершения платежа.
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="order__footer">
-								<a href="#" class="order__prev button">Назад</a>
-								<a href="#" class="order__next button">Далее</a>
+							<div class="steps__footer">
+								<a href="#" class="steps__prev button">Назад</a>
+								<a href="#" class="steps__next button">Далее</a>
 							</div>
 						</div>
 
-						<div class="order__item">
-							<div class="order__head">
-								<h3 class="order__title">Покупатель</h3>
-								<a class="order__change">изменить</a>
+						<div class="steps__item">
+							<div class="steps__head">
+								<h3 class="steps__title">Покупатель</h3>
 							</div>
-							<div class="order__fields">
-								<label class="order__fields-item">
-									<span>Ф.И.О. *</span>
-									<input type="text">
+							<div class="steps__fields">
+								<label class="steps__fields-item input-text">
+									<span>Ф.И.О. <b style="color:#FC9600;">*</b></span>
+									<input type="text" required>
 								</label>
-								<label class="order__fields-item">
-									<span>E-mail *</span>
-									<input type="text">
+								<label class="steps__fields-item input-text">
+									<span>E-mail <b style="color:#FC9600;">*</b></span>
+									<input type="email" required>
 								</label>
-								<label class="order__fields-item">
-									<span>Телефон *</span>
-									<input type="text">
+								<label class="steps__fields-item input-text">
+									<span>Телефон <b style="color:#FC9600;">*</b></span>
+									<input type="tel" required>
 								</label>
-								<label class="order__fields-item">
-									<span>Адрес доставки</span>
-									<input type="text">
+								<label class="steps__fields-item input-text">
+									<span>Адрес доставки <b style="color:#FC9600;">*</b></span>
+									<input type="text" required>
 								</label>
-								<label class="ord er__fields-item">
+								<label class="steps__fields-item input-text">
 									<span>Комментарий к закзу</span>
-									<input type="text">
+									<textarea></textarea>
 								</label>
 							</div>
-							<div class="order__footer">
-								<a href="#" class="order__prev button">Назад</a>
-								<a href="#" class="order__next button">Далее</a>
+
+							<label class="steps__confirm input-check">
+								<input type="checkbox" required checked>
+								<span>Нажимая кнопку «Оформить заказ», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных.</span>
+							</label>
+
+							<div class="steps__footer">
+								<a href="#" class="steps__prev button">Назад</a>
+								<button type="submit" class="steps__submit button">Оформить заказ</button>
 							</div>
+
 						</div>
 
-						<label class="order__confirm">
-							<input type="checkbox" required checked>
-							<span>Нажимая кнопку «Оформить заказ», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных.</span>
-						</label>
-						<div class="order__submit">
-							<button type="submit" class="button">Оформить заказ</button>
-						</div>
 					</form>
 				</div>
 				<aside class="page__aside">

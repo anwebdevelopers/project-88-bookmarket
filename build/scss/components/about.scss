@@ -1,0 +1,143 @@
+.about {
+    margin-top: 3rem;
+}
+.about__box {
+    display: flex;
+    justify-content: space-between;
+}
+.about__main {
+    flex: 0 0 auto;
+    width: 47.5%;
+
+    font-size: 1.8rem;
+}
+.about__aside {
+    flex: 0 0 auto;
+    width: 47.5%;
+
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='124' height='124' viewBox='0 0 124 124' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M122.785 104.882L98.1118 80.2104L115.715 70.044C117.09 69.2496 117.89 67.7399 117.776 66.1558C117.662 64.5713 116.652 63.1918 115.177 62.6037L36.6824 31.2954C35.1437 30.681 33.3866 31.0429 32.2148 32.2141C31.043 33.3862 30.6811 35.1427 31.2952 36.6813L62.6018 115.176C63.1904 116.652 64.5701 117.661 66.1548 117.776C67.7394 117.891 69.2498 117.09 70.0438 115.714L80.2105 98.1135L104.882 122.785C105.66 123.563 106.715 124 107.814 124C108.914 124 109.969 123.563 110.746 122.785L122.786 110.745C124.405 109.126 124.405 106.501 122.785 104.882Z' fill='%23FC9600'/%3E%3Cpath d='M18.2785 12.248C16.6133 10.5842 13.9145 10.5838 12.2485 12.248C10.5838 13.9131 10.5838 16.6128 12.2485 18.2779L21.7221 27.7513C22.5544 28.5836 23.6452 29 24.7368 29C25.8276 29 26.9188 28.5836 27.7512 27.7513C29.4163 26.0862 29.4163 23.387 27.7512 21.7219L18.2785 12.248Z' fill='%23FC9600'/%3E%3Cpath d='M21 40.9998C21 38.7913 19.1716 37 16.916 37H4.08397C1.8288 37 0 38.7909 0 40.9998C0 43.2087 1.82839 45 4.08397 45H16.916C19.1716 44.9996 21 43.2087 21 40.9998Z' fill='%23FC9600'/%3E%3Cpath d='M19.7226 53.248L10.2484 62.722C8.58385 64.3871 8.58385 67.0867 10.2484 68.7513C11.0812 69.5836 12.1723 70 13.263 70C14.3537 70 15.4452 69.5836 16.2775 68.7513L25.7512 59.2777C27.4163 57.6126 27.4163 54.9131 25.7512 53.248C24.0867 51.5842 21.3885 51.5838 19.7226 53.248Z' fill='%23FC9600'/%3E%3Cpath d='M40.9998 21C43.2087 21 45 19.1717 45 16.9162V4.0834C45 1.82832 43.2091 0 40.9998 0C38.7913 0 37 1.82791 37 4.0834V16.9166C37 19.1717 38.7909 21 40.9998 21Z' fill='%23FC9600'/%3E%3Cpath d='M56.2635 27C57.3551 27 58.4459 26.5836 59.2782 25.7513L68.7512 16.278C70.4163 14.6129 70.4163 11.9133 68.7512 10.2482C67.0861 8.58394 64.3864 8.58394 62.7218 10.2482L53.2488 19.7219C51.5837 21.387 51.5837 24.0866 53.2488 25.7513C54.0816 26.5836 55.1723 27 56.2635 27Z' fill='%23FC9600'/%3E%3C/svg%3E%0A");
+        background-position: 50% 0;
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+}
+.about__aside-box {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.about__aside-item {
+    flex: 0 0 auto;
+    width: 47.5%;
+}
+.about__aside-title {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #333;
+}
+.about__aside-text {
+    margin: 2rem 0 0 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+.gallery {
+    padding: 6rem 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        transform: translateX(-50%);
+        top: 10%;
+        width: 80%;
+        height: 0;
+        padding-bottom: 80%;
+        border-radius: 50%;
+        background-color: $color-accent;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        right: 0;
+        transform: translateX(50%);
+        top: 0;
+        width: 60%;
+        height: 0;
+        padding-bottom: 60%;
+        border-radius: 50%;
+        background-color: $color-main;
+    }
+}
+.gallery__box {
+    margin: 0 -1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.gallery__item {
+    flex: 1 1 auto;
+    max-height: 40rem;
+    margin: 1rem;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width : 1024px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .about__box {
+        display: block;
+    }
+    .about__main {
+        width: auto;
+    }
+    .about__aside {
+        width: auto;
+        margin-top: 3rem;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .about__aside-box {
+        display: block;
+    }
+    .about__aside-item {
+        width: auto;
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}
